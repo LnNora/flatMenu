@@ -1,0 +1,115 @@
+body{
+	color: white;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+.main{
+	border:solid 1px;
+	width: 300px;
+	position: absolute;
+	left: 40%;
+	top: 30%;
+}
+
+/*bar*/
+.bar{
+	background-color: #4b4b4a;
+	height: 50px;
+}
+
+.liked,.listen,label{
+	float: left;
+	line-height: 50px;
+	text-align: center;
+	border-right: solid 1px #3e3e3d;
+
+}
+.liked,.listen{
+	width: 110px;
+}
+.liked:hover,.listen:hover,label:hover{
+	background-color: #807f7d;
+	cursor: pointer;
+}
+label{
+	border: none;
+	width: 78px;
+}
+
+.liked:before,.listen:before,label:before,label:after{
+	content: "";
+	display: inline-block;
+}
+.liked:before,.listen:before{
+	width: 10px;
+	height: 10px;
+	margin-right: 0.5em;
+}
+label:before,label:after{
+	width: 15px;
+	height: 15px;
+}
+.liked:before{
+	background-image: url(../images/liked.png);
+	background-size: cover;
+}
+.listen:before{
+	background-image:url(../images/play.png);
+	background-size:cover;
+}
+
+label:before{
+	background-image:url(../images/set.png);
+	background-size:cover;
+}
+label:after{
+	background-image:url(../images/pull.png);
+	background-size:cover;
+}
+
+/*多选框*/
+#toggle:checked +.menu{
+	display: none;
+}
+#toggle{
+	display: none;
+}
+
+/*菜单*/
+.menu{
+	background-color: #4daf7c;
+	margin-top: 3px;
+
+}
+
+.menu ul{
+	margin: 0;
+	padding: 0;
+}
+
+.menu li{
+	list-style-type: none;
+	margin: 0;
+	padding: 1em;
+}
+
+.menu li:after{
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-image: url(../images/play.png);
+	background-size: cover;
+	vertical-align: bottom;
+	float: right;
+	opacity: 0;
+}
+.menu li:hover{
+	background-color: #7ec29c;
+}
+
+.menu li:hover:after{
+	opacity: 1;
+}
